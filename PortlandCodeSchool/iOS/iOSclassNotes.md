@@ -2,7 +2,7 @@
 
 Objective-C
 
-* = pointer to object in memory
+\* = pointer to object in memory
 @ = used to signify a string in ObjC
 
 layout code trumps storyboard?
@@ -16,3 +16,30 @@ Storyboard loads in full at launch
 
 model view controller
 - controller sits in-between the m and v
+
+# Class 3
+
+"unsigned" int meaning no negative sign - 
+- int will always be positive if stored as unsigned
+- allows for more storage
+
+NSLog(@"my float is %f and %i", x, y);
+- the %f or %i indicate the type of the var to put in the string. The trailing variables are the order in which to match to those types inline with the string.
+
+## Methods
+Method in ObjC means "send a message"
+- (void)viewDidLoad {} is an early example of a method to UIKit
+- (IBAction)myTestMethod:(id)sender {}
+-- (id)sender is what we want to send into the IBAction method
+- (void) = the return value
+-- we could specify a return type or a var or whatever, but "void" sends back a message that the method has completed running.
+
+(void)myVoidMethod:(float)myVariable
+^ return  ^ Method  ^ input type  ^ input 
+
+variables created within a method are only asseccible within that method. 
+
+- (void) myVoidMethod:(float)myFloat multiplier:(int)myMultiplier {}
+                        label for 2nd arg ^              ^ arg name
+- the first argument in doesn't get the convience of a label
+- popup tooltip shows the label you give to arguments after the first

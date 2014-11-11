@@ -18,3 +18,19 @@ if indexOf returns -1 then it means the index is not present
 
 Bower is part of Yeoman
 - Yeoman = managed deployment process
+
+
+# Class 2
+
+d3 tooltip library.
+- https://github.com/Caged/d3-tip
+
+d3 Layouts
+http://bl.ocks.org/mbostock/4062045
+
+Layers are awesome in d3!
+
+console.table(var)
+- prints out a table view of an array
+
+anounymous functions allow callbacks
