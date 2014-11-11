@@ -43,3 +43,31 @@ variables created within a method are only asseccible within that method.
                         label for 2nd arg ^              ^ arg name
 - the first argument in doesn't get the convience of a label
 - popup tooltip shows the label you give to arguments after the first
+
+NSObject = highest level object in ObjC
+- strings, views, etc are all subclasses of NSObject
+
+Started "CreatingObjects" project
+
+\* pointer in memory
+UILabel *myLabel = [[UILabel alloc] init];
+alloc = "hey, set aside some memory for this."
+
+[self.view addSubview:myLabel];
+- passing in the object myLabel, not just the value of view.
+
+Hierarchy
+NSObject > UIViewController > myViewController > viewDidLoad or myOwnMethod
+
+NSNumber is an object. 
+%@ is for strings that reference an object
+%f = float
+
+Expanding NSArray topic
+
+Code Signing
+Provisioning Profile
+- set to specific if you have issues with the automatic settings.
+
+## Assignment
+Coming via email.
