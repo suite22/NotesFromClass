@@ -19,3 +19,7 @@ while loop
 do {
 	// runs at least once	
 } while condition
+
+# Functions
+to include the type required for an argument use:
+- func calcArea(height: Int, width: Int) { }
