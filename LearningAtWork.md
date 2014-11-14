@@ -36,3 +36,39 @@ Alignment constraint ratio has to be anchored to something where a ratio makes s
 
 Overlay modal view
 http://mathewsanders.com/custom-menu-transitions-in-swift/
+
+# 11/13/14
+Trying to get the text fields to move up once the keyboard has been activated.
+
+Easy menu option to embed all the selected views within a scrollview.
+- http://stackoverflow.com/questions/16956893/moving-subviews-from-one-view-to-another-view-without-changing-any-position-info
+
+How do I set constraints for items within a scroll view?
+- http://www.twistedape.me.uk/blog/blog/2014/09/08/horizontal-paging-scroll-view-with-varying-width-in-storyboards/
+-- that's for side scrolling screens. Doesn't really answer the basic question of the order of constraints - the hierachy of what's related to what in a scroll view.
+
+? after the type means the var is of an optional type. Basically, means it can be nil AKA nothing.
+? after the variable then that means it could be nil, and if so, don't do the thing you're trying to do.
+! after variable name means, this var could be nil, we don't expect that, but if it is crash.
+
+as? type  - means try to treat this as this type. 
+
+po __some object__
+- way to print objects in the debugger
+
+Put a subview frame within the tab buttons and change it to the project (orange) color when someone touches it.
+- also, try to adjust the layout of the four buttons so they don't hang off the edge.
+
+BDTabButton
+
+if line.superview != self {
+	addSubview(line)
+}
+
+var frame = CGRect(x: 0, y: bounds.height-3, width: bounds.width, height: 3)
+
+self.addSubview(UIView(frame: frame))
+
+layoutSubviews get called twice 
+- when created
+- if resized
