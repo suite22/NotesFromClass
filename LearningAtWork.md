@@ -72,3 +72,12 @@ self.addSubview(UIView(frame: frame))
 layoutSubviews get called twice 
 - when created
 - if resized
+
+Adding labels that update based on the values from the data model.
+- counts for each tab
+- where are the labels getting built / updating their text
+-- the labels are named in UserProfileHeaderVC
+-- the styling takes place in the class TabButton
+
+Visual Layout Language
+http://makeapppie.com/2014/07/26/the-swift-swift-tutorial-how-to-use-uiviews-with-auto-layout-programmatically/
