@@ -81,3 +81,28 @@ Adding labels that update based on the values from the data model.
 
 Visual Layout Language
 http://makeapppie.com/2014/07/26/the-swift-swift-tutorial-how-to-use-uiviews-with-auto-layout-programmatically/
+
+# 11/17
+
+fixed layout. Constraints were set to ratios instead of fixed H and W for the image.
+~~Text overrun past table view.~~
+
+~~Once image swaps, touch events don't work?~~
+~~- disable user interaction on button to see if it passes through to the cell.~~
+
+~~location name falls off the screen. 
+- auto ellipsis?~~
+
+~~Register screen
+- rebuild constraints~~
+
+# 11/18
+
+Think of optional types like an alpha channel in video. 
+RGB -> RGB+A // works
+RGB+A -> RGB // you lose the alpha channel
+
+String -> String?
+String? -> String // loses the optional information 
+
+Optional bit basically says, "Does this exist?" true or nil.
