@@ -59,5 +59,53 @@ func weekdayOrWeekendEnum(dayOfWeek2: Day) -> String {
     }
 }
 
+var today = Day.Monday
+today = Day.Sunday
+println(today)
+
 weekdayOrWeekendEnum(Day.Sunday)
+
+
+// CODE FOR CHALLENGE
+enum Speed {
+    case Slow,
+        Medium,
+        Fast
+}
 ```
+
+# Enum Members and Raw Values
+enums create new data types
+
+```
+var today = Day.Monday
+today = .Sunday
+// Already knows that today is of type Day, so you can short hand the reassignment
+```
+
+Assigning raw values to enum cases
+
+```
+// Enum Members and Raw Values
+
+enum DayRaw: Int {
+    // system with automatically assign sequencial values to each member
+    case Monday = 1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+}
+
+func daysTillWeekend(day: DayRaw) -> Int {
+    return DayRaw.Saturday.rawValue - day.rawValue
+}
+
+daysTillWeekend(DayRaw.Monday)
+
+if let firstDayOfWeek = DayRaw(rawValue: 2) {
+    daysTillWeekend(firstDayOfWeek)
+}
+```
+
+start enum with Captial letter
+same with each Case.
+
+# Associated Values
+

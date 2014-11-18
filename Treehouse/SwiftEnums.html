@@ -1071,5 +1071,46 @@ func weekdayOrWeekendEnum(dayOfWeek2: Day) -&gt; String {
     }
 }
 
+var today = Day.Monday
+today = Day.Sunday
+println(today)
+
 weekdayOrWeekendEnum(Day.Sunday)
-</code></pre></article></body></html>
+
+
+// CODE FOR CHALLENGE
+enum Speed {
+    case Slow,
+        Medium,
+        Fast
+}
+</code></pre>
+
+<h1 id="enum-members-and-raw-values"><a name="user-content-enum-members-and-raw-values" href="#enum-members-and-raw-values" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Enum Members and Raw Values</h1>
+<p>enums create new data types</p>
+<pre><code>var today = Day.Monday
+today = .Sunday
+// Already knows that today is of type Day, so you can short hand the reassignment
+</code></pre>
+
+<p>Assigning raw values to enum cases</p>
+<pre><code>// Enum Members and Raw Values
+
+enum DayRaw: Int {
+    // system with automatically assign sequencial values to each member
+    case Monday = 1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+}
+
+func daysTillWeekend(day: DayRaw) -&gt; Int {
+    return DayRaw.Saturday.rawValue - day.rawValue
+}
+
+daysTillWeekend(DayRaw.Monday)
+
+if let firstDayOfWeek = DayRaw(rawValue: 2) {
+    daysTillWeekend(firstDayOfWeek)
+}
+</code></pre>
+
+<p>start enum with Captial letter<br />
+same with each Case.</p></article></body></html>
