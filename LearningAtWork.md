@@ -106,3 +106,16 @@ String -> String?
 String? -> String // loses the optional information 
 
 Optional bit basically says, "Does this exist?" true or nil.
+
+---
+Best ways to handle scalable graphics in Xcode
+- http://martiancraft.com/blog/2014/09/vector-images-xcode6/
+-- create PDF's that generate all 3 sizes at build time.
+-- negatives: "This is not full vector support — PNG images are generated at build-time, and you maintain no control over this."
+-- "You cannot choose a new size for the image once you’ve specified to use the vector-scaled image in your app. Stick with the size you’ve specified, or create a new PDF for the larger size. Otherwise, the images will be distorted if you scale with AutoLayout, for instance."
+
+- http://www.smashingmagazine.com/2012/12/03/design-ios-apps-with-adobe-fireworks/
+-- Adobe Fireworks
+
+layout login and reg screens
+

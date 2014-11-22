@@ -1014,84 +1014,55 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>LearningAtWork</title></head><body><article class="markdown-body"><p>fpo = for placement only</p>
-<p>clip subviews<br />
-- helps with autolayout</p>
-<p>sort order of layers in outline effect view priority in IB <br />
-- just like Photoshop</p>
-<p>&ldquo;Aspect Fill&rdquo; to leave ratio of image untouched</p>
-<p>NIB vs XIB<br />
-- XIB is in XML</p>
-<p>console rm -Rf = remove recursively and force it.<br />
-- be careful bro. This could be pretty negative.</p>
-<p>Optional chaining?</p>
-<p>Changing TextView<br />
-- aligning<br />
-&ndash; text doesn&rsquo;t align on the left edge, it&rsquo;s aligning based on the TextView left bound.<br />
-&mdash; Common offset?<br />
-- background color<br />
-&ndash; currently black? Where is that controlled?<br />
-- shift view with keyboard<br />
-&ndash; <a href="http://stackoverflow.com/questions/25693130/move-textfield-when-keyboard-appears-swift">http://stackoverflow.com/questions/25693130/move-textfield-when-keyboard-appears-swift</a><br />
-&ndash; <a href="http://www.raywenderlich.com/77092/text-kit-tutorial-swift">http://www.raywenderlich.com/77092/text-kit-tutorial-swift</a><br />
-- multiline wrap?</p>
-<ol>
-<li>Layout 80% of issues on next screens [x] []</li>
-<li>Address flow between screens? [] []</li>
-<li>TextView respond to keyboard [] [] []</li>
-</ol>
-<p>Alignment constraint ratio has to be anchored to something where a ratio makes sense - center Y in superview is an example, compared to anchored to the top of the superview.<br />
-- to split two buttons 50/50 at the bottom, tied left to left edge and then for width constrained to superview center X and set the ratio to 2:1. Then for the button on the bottom right, set to equal width as other button and set to trailing left edge = 0.</p>
-<p>Overlay modal view<br />
-<a href="http://mathewsanders.com/custom-menu-transitions-in-swift/">http://mathewsanders.com/custom-menu-transitions-in-swift/</a></p>
-<h1 id="111314"><a name="user-content-111314" href="#111314" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>11/13/14</h1>
-<p>Trying to get the text fields to move up once the keyboard has been activated.</p>
-<p>Easy menu option to embed all the selected views within a scrollview.<br />
-- <a href="http://stackoverflow.com/questions/16956893/moving-subviews-from-one-view-to-another-view-without-changing-any-position-info">http://stackoverflow.com/questions/16956893/moving-subviews-from-one-view-to-another-view-without-changing-any-position-info</a></p>
-<p>How do I set constraints for items within a scroll view?<br />
-- <a href="http://www.twistedape.me.uk/blog/blog/2014/09/08/horizontal-paging-scroll-view-with-varying-width-in-storyboards/">http://www.twistedape.me.uk/blog/blog/2014/09/08/horizontal-paging-scroll-view-with-varying-width-in-storyboards/</a><br />
-&ndash; that&rsquo;s for side scrolling screens. Doesn&rsquo;t really answer the basic question of the order of constraints - the hierachy of what&rsquo;s related to what in a scroll view.</p>
-<p>? after the type means the var is of an optional type. Basically, means it can be nil AKA nothing.<br />
-? after the variable then that means it could be nil, and if so, don&rsquo;t do the thing you&rsquo;re trying to do.<br />
-! after variable name means, this var could be nil, we don&rsquo;t expect that, but if it is crash.</p>
-<p>as? type  - means try to treat this as this type. </p>
-<p>po <strong>some object</strong><br />
-- way to print objects in the debugger</p>
-<p>Put a subview frame within the tab buttons and change it to the project (orange) color when someone touches it.<br />
-- also, try to adjust the layout of the four buttons so they don&rsquo;t hang off the edge.</p>
-<p>BDTabButton</p>
-<p>if line.superview != self {<br />
-    addSubview(line)<br />
-}</p>
-<p>var frame = CGRect(x: 0, y: bounds.height-3, width: bounds.width, height: 3)</p>
-<p>self.addSubview(UIView(frame: frame))</p>
-<p>layoutSubviews get called twice <br />
-- when created<br />
-- if resized</p>
-<p>Adding labels that update based on the values from the data model.<br />
-- counts for each tab<br />
-- where are the labels getting built / updating their text<br />
-&ndash; the labels are named in UserProfileHeaderVC<br />
-&ndash; the styling takes place in the class TabButton</p>
-<p>Visual Layout Language<br />
-<a href="http://makeapppie.com/2014/07/26/the-swift-swift-tutorial-how-to-use-uiviews-with-auto-layout-programmatically/">http://makeapppie.com/2014/07/26/the-swift-swift-tutorial-how-to-use-uiviews-with-auto-layout-programmatically/</a></p>
-<h1 id="1117"><a name="user-content-1117" href="#1117" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>11/17</h1>
-<p>fixed layout. Constraints were set to ratios instead of fixed H and W for the image.<br />
-<del>Text overrun past table view.</del></p>
-<p><del>Once image swaps, touch events don&rsquo;t work?</del><br />
-<del>- disable user interaction on button to see if it passes through to the cell.</del></p>
-<p><del>location name falls off the screen. <br />
-- auto ellipsis?</del></p>
-<p><del>Register screen<br />
-- rebuild constraints</del></p>
-<h1 id="1118"><a name="user-content-1118" href="#1118" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>11/18</h1>
-<p>Think of optional types like an alpha channel in video. <br />
-RGB -&gt; RGB+A // works<br />
-RGB+A -&gt; RGB // you lose the alpha channel</p>
-<p>String -&gt; String?<br />
-String? -&gt; String // loses the optional information </p>
-<p>Optional bit basically says, &ldquo;Does this exist?&rdquo; true or nil.</p>
-<hr />
-<p>Best ways to handle scalable graphics in Xcode<br />
-- <a href="http://martiancraft.com/blog/2014/09/vector-images-xcode6/">http://martiancraft.com/blog/2014/09/vector-images-xcode6/</a><br />
-&ndash; create PDF&rsquo;s that generate all 3 sizes at build time.</p></article></body></html>
+</style><title>DataVizNotes</title></head><body><article class="markdown-body"><h1 id="class-1"><a name="user-content-class-1" href="#class-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Class 1</h1>
+<p>Insert &ldquo;debugger&rdquo; in JS file to create a break point. Step through in Chrome. Or click sidebar near line numbers to insert break point in Chrome.</p>
+<p>callbacks = asyncronous - allows for failures</p>
+<p>dsv = delimiter separated <br />
+- d3 csv and tsv both just point to dsv for what delimiter to use</p>
+<p>get parameters <br />
+- refer to Code Academy API classes</p>
+<p>JSON = JS object format</p>
+<p>low dash</p>
+<p>if indexOf returns -1 then it means the index is not present</p>
+<p>Bower is part of Yeoman<br />
+- Yeoman = managed deployment process</p>
+<h1 id="class-2"><a name="user-content-class-2" href="#class-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Class 2</h1>
+<p>d3 tooltip library.<br />
+- <a href="https://github.com/Caged/d3-tip">https://github.com/Caged/d3-tip</a></p>
+<p>d3 Layouts<br />
+<a href="http://bl.ocks.org/mbostock/4062045">http://bl.ocks.org/mbostock/4062045</a></p>
+<p>Layers are awesome in d3!</p>
+<p>console.table(var)<br />
+- prints out a table view of an array</p>
+<p>anounymous functions allow callbacks</p>
+<h1 id="class-3"><a name="user-content-class-3" href="#class-3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Class 3</h1>
+<p>c3.js is an easier framework for simple charts built on top of d3.<br />
+- <a href="http://c3js.org/gettingstarted.html">http://c3js.org/gettingstarted.html</a></p>
+<p>d3.set is a way to get only the unique values from an array</p>
+<p>lodash has a lot nicer ways to handle data without converting it to a string like d3.<br />
+- allows method chaining like d3<br />
+- <em>.compact(exampleArray)<br />
+&ndash; removes all the &ldquo;falsey&rdquo; values<br />
+&mdash; null, &ldquo;&rdquo; (empty string), false, undefined<br />
+&mdash; returns the cleaned up array<br />
+- </em>.intersection(array1, array2)<br />
+&ndash; returns only the values that are in both arrays<br />
+- _.difference(array1, array2)<br />
+&ndash; returns the unique values in array1 that are not in array2.<br />
+&mdash; not the unique values in both</p>
+<p>d3.map = returns a new array</p>
+<p>try not to iterate over objects - key:values</p>
+<p>=====<br />
+Post-Lunch</p>
+<p>Looking at forcedPie example</p>
+<p>_.countBy(object or array)<br />
+&ndash; loops through and returns the count of the occurances. </p>
+<p>d3.extent = grabs the min and max of an array<br />
+&ndash; handy way to get your domain</p>
+<p>Mike Bostock forced layout talk<br />
+- amazing examples!<br />
+- <a href="https://vimeo.com/29458354">https://vimeo.com/29458354</a><br />
+- <a href="http://mbostock.github.io/d3/talk/20110921/#0">http://mbostock.github.io/d3/talk/20110921/#0</a></p>
+<p>Wrap the entire function in an anonymous function to reduce name space conflicts.</p>
+<p>WKID = common placename ID</p>
+<h1 id="class-4"><a name="user-content-class-4" href="#class-4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Class 4</h1></article></body></html>
