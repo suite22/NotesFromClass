@@ -79,3 +79,36 @@ Wrap the entire function in an anonymous function to reduce name space conflicts
 WKID = common placename ID
 
 # Class 4
+
+Google refine / OpenRefine to clean up ECE dataset from http://www.acf.hhs.gov/programs/occ/resource/fy-2012-ccdf-data-tables-final
+
+https://www.mapbox.com
+
+http://www.sysomos.com
+
+## R overview
+### RStudio
+one indexed instead of 0.
+Assignment is from -> instead of =
+- can go either direction -> or <-
+
+Vectors are one or more elements
+
+Matrix data structure
+
+Trellis plots are awesome!
+
+## Mapbox
+TileMill - https://www.mapbox.com/tilemill/
+Mapbox Studio
+post-gist -- 
+carta css
+mbtiles
+- geographic data / could be anything
+shape files
+
+http://nyctaxi.herokuapp.com
+
+Meta: data about the data available?
+- graph out the 
+
