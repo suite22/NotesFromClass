@@ -112,3 +112,5 @@ http://nyctaxi.herokuapp.com
 Meta: data about the data available?
 - graph out the 
 
+
+

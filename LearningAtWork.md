@@ -119,3 +119,8 @@ Best ways to handle scalable graphics in Xcode
 
 layout login and reg screens
 
+# 11/24
+Re-created issue. 
+- can only bail out at the end
+How does edit dream feed you over to create dream?
+- action sheet case 2

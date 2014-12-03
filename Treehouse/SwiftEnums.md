@@ -109,3 +109,6 @@ same with each Case.
 
 # Associated Values
 
+# Methods or Member Functions
+methods are just functions associated to a type. 
+- i.e. array.removeLast() is a function that's designed to help manupulate the array, but referred to as a method.
