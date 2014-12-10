@@ -112,3 +112,9 @@ same with each Case.
 # Methods or Member Functions
 methods are just functions associated to a type. 
 - i.e. array.removeLast() is a function that's designed to help manupulate the array, but referred to as a method.
+
+# Initializers
+
+# Struct Methods
+
+
